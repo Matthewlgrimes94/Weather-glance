@@ -9,7 +9,11 @@
 
 # Screenshots
 
+* ![screenshot1](https://github.com/Matthewlgrimes94/Weather-glance/blob/master/screenshots/Screenshot%20(19).png)
 
+* ![screenshot2](https://github.com/Matthewlgrimes94/Weather-glance/blob/master/screenshots/Screenshot%20(21).png)
+
+* ![screnshot3](https://github.com/Matthewlgrimes94/Weather-glance/blob/master/screenshots/Screenshot%20(22).png)
 <---------------------------------------------------------------------------------------------------------->
 
 # Features
