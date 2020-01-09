@@ -1,0 +1,24 @@
+HTML {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.searched {
+    cursor: pointer;
+}
+
+body {
+    background-color: #E3E2DF;
+}
+
+.weather, .searched {
+    background-color: #b2fefe!important;
+}
+
+#history button {
+    position: absolute;
+    bottom: 2.5%;
+    right: 0;
+    font-size: smaller;
+    height: 57%;
+    border: none;
+}
