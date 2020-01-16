@@ -81,7 +81,7 @@ historyEL.on('click', '.remove', function() {
 // Function that renders all of the weather
 function renderAllWeather(searchQ) {
     // Axaj call for current weather 
-    let queryURLWeather = `http://api.openweathermap.org/data/2.5/weather?q=${searchQ}&units=${units}&APPID=2eccc5069a92b45c4e66fa64bfe81446`;
+    let queryURLWeather = `https://api.openweathermap.org/data/2.5/weather?q=${searchQ}&units=${units}&APPID=2eccc5069a92b45c4e66fa64bfe81446`;
     $.ajax({
         url: queryURLWeather,
         method: 'GET'
@@ -96,7 +96,7 @@ function renderAllWeather(searchQ) {
         // Render the current weather based on the response, using the render current weather function
         renderCurrentWeather(response,searchQ);
         // Ajax call for the 5 day weather forecast
-        let queryURLForecast = `http://api.openweathermap.org/data/2.5/forecast?q=${searchQ}&units=${units}&APPID=2eccc5069a92b45c4e66fa64bfe81446`;
+        let queryURLForecast = `https://api.openweathermap.org/data/2.5/forecast?q=${searchQ}&units=${units}&APPID=2eccc5069a92b45c4e66fa64bfe81446`;
         $.ajax({
             url: queryURLForecast,
             method: 'GET'
@@ -129,7 +129,7 @@ function renderCurrentWeather (response) {
         let lat = response.coord.lat;
         let lon = response.coord.lon;
         // Get the longitude and latitude of the searched city and pass that in to the uvi index API search
-        let queryURLUV = `http://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${lon}&APPID=2eccc5069a92b45c4e66fa64bfe81446`;
+        let queryURLUV = `https://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${lon}&APPID=2eccc5069a92b45c4e66fa64bfe81446`;
         $.ajax({  
             url: queryURLUV,
             method: 'GET'
@@ -159,7 +159,7 @@ function renderForecast(response) {
             $(`<h3 class="pt-3">${response.city.name}<h3>`),
             $('<hr>'),
             $(`<h4>${moment(response.list[i].dt_txt).format('dddd')}</h4>`),
-            $(`<img src="http://openweathermap.org/img/w/${response.list[i].weather[0].icon}.png"></img>`),
+            $(`<img src="https://openweathermap.org/img/w/${response.list[i].weather[0].icon}.png"></img>`),
             $(`<p>${response.list[i].weather[0].description}<p>`));
         for (var j = 0; j < 8; j++) {
             // Add up the data from each block of 8, and average out the numbers
@@ -204,7 +204,7 @@ function createHistory (searchQ) {
 
 // Function that loads the weather from coordinates
 function renderFromCoords(lat, lon) {
-    let queryURLCoords = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=2eccc5069a92b45c4e66fa64bfe81446`;
+    let queryURLCoords = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=2eccc5069a92b45c4e66fa64bfe81446`;
     $.ajax({  
         url: queryURLCoords,
         method: 'GET'
